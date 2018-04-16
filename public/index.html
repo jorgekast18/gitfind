@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GitFind</title>
+	<!-- Styles -->
+	<link href="/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css"/>
+	<link rel="stylesheet" href="css/busy-load.min.css"/>
+	<link rel="stylesheet" href="fonts/fonts.css"/>
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body id="body">
+	<!-- Nav bar -->
+	<div id="navBar" class="top_nav navbar navbar-fixed-top" style="display: none; padding: 1.5rem 1rem;">
+		<div class="navbar-left">
+			<span class="title">
+				Hola <span id="userNameInNavBar" class="titleYellow"></span>!! Bienvenida a <span class="titleYellow">GITFIND</span>	
+			</span>	
+			<div class="form-inline my-2 my-lg-0 float-right">
+		      	<div class="input-group">
+		      	  	<input type="text" id="searchRepo" name="searchRepo" class="form-control" placeholder="Ingrese la palabra a buscar" aria-describedby="basic-addon2">
+		      	  	<span class="input-group-addon" id="basic-addon2" style="background-color: black">
+		      	  		<button class="btn" style="background-color: transparent;" onclick="searchRepo()">
+		      	  			<span class="oi oi-magnifying-glass" style="color: white;">  </span>
+		      	  		</button>	
+		      	  	</span>
+		      	</div>
+		    </div>
+		</div>
+	</div>
+	<!-- End nav bar -->
+
+	<!-- Container with first landing -->
+	<div id="containerSigIn" class="container signin" style="display: block;">
+		<div class="row">
+			<div class="col-sm float-right">
+				
+			</div>
+			<div class="col-sm float-right">
+				
+			</div>
+			<div class="col-sm float-right">
+				<h1 class="title" style="font-size: 80px;">
+					GITFIND
+				</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm float-right">
+				
+			</div>
+			<div class="col-sm float-right">
+				
+			</div>
+			<!-- <form rol="form" name="formInputData"> -->
+				<div class="col-sm float-right">
+					<div class="form-group">
+						<input type="text" id="userName" style="margin-top: 20%" class="form-control" name="insertName" placeholder="Ingrese su nombre">
+					</div>	
+					<div class="form-group">
+						<button class="btn btn-enter float-right" onclick="clickEnter()" name="enterButton">ENTRAR</button>
+					</div>
+				</div>	
+			<!-- </form> -->
+		</div>
+	</div>
+	<!-- End container with first landing -->
+
+	<!-- Container wiht second landing -->
+	<div id="containerRepos" class="container" style="display: none; margin-top: 5%;">
+		<div class="row containerRepo" style="background-color: white;">
+			<!-- Contaioner with repositories -->
+			<div class="col-sm-9">
+				<div id="repositoriesCards" class="row ">
+				</div>
+			</div>
+			<!-- End contaioner with repositories -->
+
+			<!-- Container with favorites -->
+			<div class="col-sm-3 borderLeft">
+				<div class="row" style="background-color: black; padding: 1rem 1rem;">
+					<p class="titleFavorites">FAVORITOS</p>
+				</div>
+				<div id="repositoriesFavorites" class="row">
+					
+				</div>
+			</div>
+			<!-- End container with favorites -->
+		</div>
+	</div>
+	<!-- End container wiht second landing -->
+
+	<!-- Scripts -->
+
+	<!-- Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-firestore.js"></script>
+	<script type="text/javascript" src="js/lib/jquery.js"></script>
+	<script type="text/javascript" src="js/lib/firebase.js"></script>
+	<script type="text/javascript" src="js/lib/busy-load.min.js"></script>
+	<script type="text/javascript" src="js/git-find.js"></script>
+	<!-- End scripts -->
+</body>
+</html>
